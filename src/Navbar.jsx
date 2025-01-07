@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const Navbar = ({setLoggedIn,loggedIn}) => {
+const Navbar = ({ setNav }) => {
   return (
     <div>
-      <ul>
-        <a className='mx-5' href="">Home</a>
-        <a href="">About</a>
-        <button onClick={()=>setLoggedIn(!loggedIn)} className='bg-blue-400 px-5 py-2 rounded-lg text-white mx-5'>{loggedIn?'Logout':'Login'}</button>
+      <ul className="flex justify-around items-center bg-blue-700 h-16 text-white ">
+        <button onClick={() => setNav("home")}>Home</button>
+        <button onClick={() => setNav("todo")}>Todos</button>
+        <button onClick={() => setNav("about")}>About</button>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
